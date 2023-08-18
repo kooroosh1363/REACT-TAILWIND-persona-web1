@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { FaBars, FaTimes, FaLinkedin, FaInstagram, FaGithub, FaYoutube } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import Logo from '../assets/raad.png';
@@ -34,7 +34,7 @@ const Navbar = () => {
 
             {/* hamburger menu */}
             <div onClick={clickHandle} className='md:hidden z-10'>
-                {!nav ? <FaBars /> : <FaTimes/>}
+                {!nav ? <FaBars /> : <FaTimes />}
             </div>
             {/* hamburger menu */}
 
@@ -55,11 +55,26 @@ const Navbar = () => {
 
 
             {/* social icons */}
-            <div className='flex fixed flex-col top-[40%] left-0'>
+            <div className='hidden lg:flex fixed flex-col top-[40%] left-0'>
                 <ul>
-                    <li>
-                        <a href="/">
-                            Linkedin <FaLinkedin/>
+                    <li className='w-[160px] h-[70px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] rounded-full rounded-l-none  duration-500 bg-blue-500'>
+                        <a href="/" className='flex justify-between items-center w-full text-white  px-4'>
+                        Linkedin <FaLinkedin size={30} />
+                        </a>
+                    </li>
+                    <li className='w-[160px] h-[70px] mt-2 flex justify-between items-center ml-[-100px] hover:ml-[-10px] rounded-full rounded-l-none  duration-500 bg-pink-600'>
+                        <a href="/" className='flex justify-between items-center w-full text-white  px-4'>
+                        Instagram  <FaInstagram size={60} />
+                        </a>
+                    </li>
+                    <li className='w-[160px] h-[70px]  mt-2  flex justify-between items-center ml-[-100px] hover:ml-[-10px] rounded-full rounded-l-none  duration-500 bg-gray-600'>
+                        <a href="/" className='flex justify-between items-center w-full text-white  px-4'>
+                        Github  <FaGithub size={30} />
+                        </a>
+                    </li>
+                    <li className='w-[160px] h-[70px]  mt-2  flex justify-between items-center ml-[-100px] hover:ml-[-10px] rounded-full rounded-l-none  duration-500 bg-red-700'>
+                        <a href="/" className='flex justify-between items-center w-full text-white  px-4'>
+                            youtube  <FaYoutube size={30} />
                         </a>
                     </li>
                 </ul>

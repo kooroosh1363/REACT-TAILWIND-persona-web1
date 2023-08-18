@@ -14,4 +14,9 @@
         @apply px-4;
         @apply cursor-pointer;
     }
+
+    .pic{
+        background:  url(../src/assets/banner.JPG) no-repeat right center;
+        background-size: cover;
+    }
 }
