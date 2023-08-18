@@ -3,7 +3,7 @@ import { HiArrowNarrowRight } from  'react-icons/hi';
 
 const Home = () => {
   return (
-    <div>
+    <div className='w-full h-screen pic'>
 
     </div>
   )
