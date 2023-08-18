@@ -1,14 +1,58 @@
-import React from 'react'
-import { FaBArs, FaTimes} from 'react-icons/fa';
+import React, {useState} from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/raad.png';
 
 
 const Navbar = () => {
     return (
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#08111e] text-gray-300'>
+        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#16253a] text-gray-300'>
+            {/* logo */}
             <div>
-                <img src={Logo} alt="logo" style={{width:'140px'}}/>
+                <img src={Logo} alt="logo" style={{ width: '140px' }} />
             </div>
+            {/* logo */}
+
+            {/* menu */}
+            <ul className='md:flex hidden'>
+                <li>Home</li>
+                <li>About</li>
+                <li>Skills</li>
+                <li>work</li>
+                <li>contact</li>
+            </ul>
+
+            {/* menu */}
+
+
+
+
+            {/* hamburger menu */}
+            <div className='md:hidden z-10'>
+                <FaBars />
+            </div>
+            {/* hamburger menu */}
+
+
+
+
+            {/* mobile menu */}
+            <ul className='hidden absolute top-0 left-0 w-full h-screen bg-[#16253a] flex flex-col justify-center items-center'>
+                <li className='py-5 text-1*1 font-semibold uppercase'>Home</li>
+                <li className='py-5 text-1*1 font-semibold uppercase'>About</li>
+                <li className='py-5 text-1*1 font-semibold uppercase'>Skills</li>
+                <li className='py-5 text-1*1 font-semibold uppercase'>work</li>
+                <li className='py-5 text-1*1 font-semibold uppercase'>contact</li>
+            </ul>
+            {/* mobile menu */}
+
+
+
+
+            {/* social icons */}
+            <div className='hidden'>
+
+            </div>
+            {/* social icons */}
         </div>
     )
 }
