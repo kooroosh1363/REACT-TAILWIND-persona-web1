@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaLinkedin, FaInstagram, FaGithub, FaYoutube } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 import Logo from '../assets/raad.png';
 
 
@@ -54,8 +55,14 @@ const Navbar = () => {
 
 
             {/* social icons */}
-            <div className='hidden'>
-
+            <div className='flex fixed flex-col top-[40%] left-0'>
+                <ul>
+                    <li>
+                        <a href="/">
+                            Linkedin <FaLinkedin/>
+                        </a>
+                    </li>
+                </ul>
             </div>
             {/* social icons */}
         </div>
