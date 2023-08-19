@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes, FaLinkedin, FaInstagram, FaGithub, FaYoutube } from 'react-icons/fa';
+import { FaBars, FaTimes, FaLinkedin, FaInstagram, FaGithub, FaKaggle } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import Logo from '../assets/raad.png';
 
@@ -72,9 +72,9 @@ const Navbar = () => {
                         Github  <FaGithub size={30} />
                         </a>
                     </li>
-                    <li className='w-[160px] h-[70px]  mt-2  flex justify-between items-center ml-[-100px] hover:ml-[-10px] rounded-full rounded-l-none  duration-500 bg-red-700'>
+                    <li className='w-[160px] h-[70px]  mt-2  flex justify-between items-center ml-[-100px] hover:ml-[-10px] rounded-full rounded-l-none  duration-500 bg-blue-500'>
                         <a href="/" className='flex justify-between items-center w-full text-white  px-4'>
-                            youtube  <FaYoutube size={30} />
+                            Kaggle  <FaKaggle size={30} />
                         </a>
                     </li>
                 </ul>
