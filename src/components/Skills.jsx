@@ -1,6 +1,18 @@
 import React from 'react'
 
 import HTML from '../assets/1200px-HTML5_Badge.svg.png';
+import CSS from '../assets/css-removebg-preview.png';
+import TAILWIND from '../assets/Tailwind.png';
+import JS from '../assets/JavaScript.png';
+import REACT from '../assets/React.png';
+import DATAS from '../assets/data-science-removebg-preview.png';
+import ML from '../assets/ml-removebg-preview.png';
+import GITHUB from '../assets/github-removebg-preview.png';
+import WORDPRESS from '../assets/WordPress.png';
+import SQL from '../assets/mysql.png';
+import SASS from '../assets/sass-removebg-preview.png';
+
+
 const Skills = () => {
   return (
     <div name='skills' className='w-full h-screen skills  bg-black'>
