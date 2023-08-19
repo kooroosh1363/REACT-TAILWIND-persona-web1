@@ -16,7 +16,17 @@
     }
 
     .pic{
-        background:  url(../src/assets/banner.JPG) no-repeat right center;
-        background-size: cover;
+        /* background:  url(../src/assets/banner.JPG) no-repeat right center;
+        background-size: cover; */
+    }
+
+    .about{
+        /* background:  url(../src/assets/react2.jpeg) no-repeat right center;
+        background-size: cover; */
+    }
+
+    .skills{
+        /* background:  url(../src/assets/react2.jpeg) no-repeat right center;
+        background-size: cover; */
     }
 }
