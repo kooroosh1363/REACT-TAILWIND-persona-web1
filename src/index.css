@@ -6,26 +6,49 @@
 
 
 @layer base {
-    body{
+    body {
         @apply font-[Lora];
 
     }
-    li{
+
+    li {
         @apply px-4;
         @apply cursor-pointer;
     }
 
-    .pic{
+
+    .content {
+        width: 500px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .content:hover {
+
+        background-image: linear-gradient(to right,
+                rgba(129, 140, 73, 0.7),
+                hsla(153, 51%, 32%, 0.7)) !important;
+
+    }
+
+
+
+
+
+    .pic {
         /* background:  url(../src/assets/banner.JPG) no-repeat right center;
         background-size: cover; */
     }
 
-    .about{
+    .about {
         /* background:  url(../src/assets/react2.jpeg) no-repeat right center;
         background-size: cover; */
     }
 
-    .skills{
+    .skills {
         /* background:  url(../src/assets/react2.jpeg) no-repeat right center;
         background-size: cover; */
     }
