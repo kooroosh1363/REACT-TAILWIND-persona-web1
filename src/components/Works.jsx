@@ -60,7 +60,7 @@ const Works = () => {
                 </div>
             </div>
 
-            <div style={{ backgroundImage: `url(${work})`}} className='shadow-lg shadow-[#000] group container rounded-full flex justify-center items-center mx-auto content hover:scale-105 duration-300'>
+            {/* <div style={{ backgroundImage: `url(${work})`}} className='shadow-lg shadow-[#000] group container rounded-full flex justify-center items-center mx-auto content hover:scale-105 duration-300'>
                 <div className='opacity-0 text-center group-hover:opacity-100'>
                     <span className='font-bold text-white tracking-wider uppercase'>
                         New WebSite
@@ -73,9 +73,9 @@ const Works = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div style={{ backgroundImage: `url(${work})`}} className='shadow-lg shadow-[#000] group container rounded-full flex justify-center items-center mx-auto content hover:scale-105 duration-300'>
+            {/* <div style={{ backgroundImage: `url(${work})`}} className='shadow-lg shadow-[#000] group container rounded-full flex justify-center items-center mx-auto content hover:scale-105 duration-300'>
                 <div className='opacity-0 text-center group-hover:opacity-100'>
                     <span className='font-bold text-white tracking-wider uppercase'>
                         New WebSite
@@ -88,9 +88,9 @@ const Works = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div style={{ backgroundImage: `url(${work})`}} className='shadow-lg shadow-[#000] group container rounded-full flex justify-center items-center mx-auto content hover:scale-105 duration-300'>
+            {/* <div style={{ backgroundImage: `url(${work})`}} className='shadow-lg shadow-[#000] group container rounded-full flex justify-center items-center mx-auto content hover:scale-105 duration-300'>
                 <div className='opacity-0 text-center group-hover:opacity-100'>
                     <span className='font-bold text-white tracking-wider uppercase'>
                         New WebSite
@@ -103,7 +103,7 @@ const Works = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             
 
