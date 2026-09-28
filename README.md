@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# PersonaOS — Data-Driven React Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PersonaOS modernizes the original 2023 React + Tailwind personal website into a portfolio system centered on shipped work, architecture, and engineering decisions.
 
-## Available Scripts
+## Why this upgrade
 
-In the project directory, you can run:
+The original site was a useful learning project, but it had several portfolio limitations:
 
-### `npm start`
+- Create React App / `react-scripts 5`
+- CRA boilerplate README and assets
+- large unused images, including multi-megabyte banner files
+- Lorem Ipsum in key sections
+- social and project links pointing to `/`
+- duplicated static skill cards
+- no project data model
+- no project filtering or case-study state
+- no automated tests or CI
+- a contact form with no real backend behavior
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+PersonaOS keeps React + Tailwind while changing the site from a static profile page into a structured engineering portfolio.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Product behavior
 
-### `npm test`
+- structured portfolio data
+- selected project grid
+- category filters
+- full-text project search
+- case-study dialog
+- persistent light/dark theme
+- responsive navigation
+- keyboard-accessible interactions
+- reduced-motion support
+- real GitHub and LinkedIn destinations
+- explicit portfolio scope instead of fake backend behavior
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Architecture
 
-### `npm run build`
+```text
+src/data/portfolio.js
+        │
+        ├── profile
+        ├── projects
+        └── capabilities
+        │
+        ▼
+src/lib/project-utils.js
+src/lib/theme.js
+        │
+        ▼
+src/App.jsx
+        │
+        ▼
+Tailwind UI
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Project filtering and theme persistence are isolated from the main UI so they can be tested independently.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project model
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Each project records:
 
-### `npm run eject`
+- title
+- category
+- year
+- summary
+- problem
+- approach
+- outcomes
+- stack
+- repository link
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The case-study dialog renders from this same source of truth.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Local development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Requirements:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js 20+
 
-## Learn More
+Run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tests
 
-### Code Splitting
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The suite covers:
 
-### Analyzing the Bundle Size
+- category filtering
+- metadata search
+- project-count formatting
+- theme normalization/persistence
+- project search interaction
+- category interaction
+- case-study open/close behavior
+- theme persistence
+- mobile menu state
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Production build
 
-### Making a Progressive Web App
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Vite writes the optimized application to `dist/`.
 
-### Advanced Configuration
+## CI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Every pull request and push to `main` runs:
 
-### Deployment
+```text
+npm install
+   ↓
+Vitest
+   ↓
+Vite + Tailwind production build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## GitHub Pages
 
-### `npm run build` fails to minify
+Enable once:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Settings → Pages → Source → GitHub Actions**
+
+Then run:
+
+**Actions → Deploy Pages → Run workflow**
+
+## Scope
+
+PersonaOS is a static portfolio interface. It does not claim a CMS, analytics backend, authentication system, or contact-message delivery service.
+
+## License
+
+MIT.

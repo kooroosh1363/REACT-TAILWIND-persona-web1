@@ -1,9 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: ["Georgia", "Cambria", "Times New Roman", "serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+      },
+      boxShadow: {
+        soft: "0 30px 90px rgba(15, 23, 42, 0.12)"
+      }
+    }
   },
-  plugins: [],
-}
-
+  plugins: []
+};
