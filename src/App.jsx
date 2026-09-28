@@ -122,6 +122,7 @@ function App() {
           </a>
 
           <nav
+            id="primary-navigation"
             aria-label="Primary"
             className={`${menuOpen ? "flex" : "hidden"} absolute left-4 right-4 top-[72px] flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-soft md:static md:flex md:flex-row md:border-0 md:bg-transparent md:p-0 md:shadow-none dark:border-slate-700 dark:bg-slate-900 md:dark:bg-transparent`}
           >
